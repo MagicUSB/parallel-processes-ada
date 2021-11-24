@@ -16,18 +16,12 @@ begin
    Put ("Enter the number of elements: ");
    Get (num_elements);
    Init_Array (num_elements, arr);
-   step :=
-     Integer'Max
-       (Integer
-          (Float'Ceiling
-             (Log (X => Float (num_elements), Base => Float (Core_Number)))),
-        1);
-   cnt := 1;
+   step := Step (arr'Length);
+   cnt  := 1;
    while cnt <= num_elements loop
       sum :=
         sum + Partial_Sum (arr, cnt, Integer'Min (cnt + step, num_elements));
       cnt := cnt + step + 1;
    end loop;
-
    Put ("Sum: " & sum'Image);
 end Main;

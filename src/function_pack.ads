@@ -9,5 +9,6 @@ package function_pack is
    function Partial_Sum
      (arr : Int_Array; start_index : Integer; end_index : Integer)
       return Long_Long_Integer;
+   function Step (arr_size : Integer) return Integer;
 
 end function_pack;
