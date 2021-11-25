@@ -1,7 +1,7 @@
 with Ada.Numerics.Elementary_Functions; use Ada.Numerics.Elementary_Functions;
 package function_pack is
 
-   Max_Width   : constant := 900_000;
+   Max_Width   : constant := 300_000;
    Core_Number : constant := 2;
 
    type Int_Array is array (1 .. Max_Width) of Integer;
