@@ -1,8 +1,6 @@
 with Ada.Text_IO, Ada.Integer_Text_IO, Ada.Numerics, function_pack;
 use Ada.Text_IO, Ada.Integer_Text_IO, Ada.Numerics, function_pack;
 
-with Ada.Numerics.Elementary_Functions; use Ada.Numerics.Elementary_Functions;
-
 procedure Main is
 
    num_elements : Integer;
@@ -16,7 +14,7 @@ begin
    Put ("Enter the number of elements: ");
    Get (num_elements);
    Init_Array (num_elements, arr);
-   step := Step (arr'Length);
+   step := Calculate_Step (arr'Length);
    cnt  := 1;
    while cnt <= num_elements loop
       sum :=
