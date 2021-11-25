@@ -20,14 +20,13 @@ package body function_pack is
       return sum;
    end Partial_Sum;
 
-   function Step (arr_size : Integer) return Integer is
+   function Calculate_Step (arr_size : Integer) return Integer is
    begin
       return
         Integer'Max
           (Integer
              (Float'Ceiling
-                (Log
-                   (X => Float (num_elements), Base => Float (Core_Number)))),
+                (Log (X => Float (arr_size), Base => Float (Core_Number)))),
            1);
-   end Step;
+   end Calculate_Step;
 end function_pack;
